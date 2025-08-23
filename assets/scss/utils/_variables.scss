@@ -461,13 +461,14 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,   // 4px
-  2: $spacer * .5,    // 8px
-  2_5: $spacer * .75, // 12px
-  3: $spacer,         // 16px
-  4: $spacer * 1.5,   // 24px
-  5: $spacer * 3,     // 48px
-  6: $spacer * 5,     // 80px
+  1: $spacer * .25,    // 4px
+  2: $spacer * .5,     // 8px
+  2_5: $spacer * .75,  // 12px
+  3: $spacer,          // 16px
+  3_5: $spacer * 1.25, // 20px
+  4: $spacer * 1.5,    // 24px
+  5: $spacer * 3,      // 48px
+  6: $spacer * 5,      // 80px
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -699,7 +700,8 @@ $font-sizes: (
   4: $h4-font-size, // fs-4 (24px)
   5: $h5-font-size, // fs-5 (20px)
   5_5: 1.125rem,    // fs-5_5 (18px)
-  6: $h6-font-size  // fs-6 (16px)
+  6: $h6-font-size,  // fs-6 (16px)
+  7: 0.875rem       // fs-7 (14px)
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1250,7 +1252,7 @@ $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * .5 !default;
+$navbar-brand-padding-y:            0 !default; // ($nav-link-height - $navbar-brand-height) * .5 !default;
 $navbar-brand-margin-end:           1rem !default;
 
 $navbar-toggler-padding-y:          .25rem !default;
